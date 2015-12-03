@@ -1,0 +1,90 @@
+<!--
+@license
+Copyright (c) 2015 dean wagner wagner@nmb.gov. All rights reserved.
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../web-client/web-client.html">
+<link rel="import" href="../aws-home/aws-home.html">
+<link rel="import" href="../nmb-private-pages/nmb-theme.html">
+
+
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <aws-mgt5></aws-mgt5>
+
+@demo
+-->
+<dom-module id="aws-mgt5">
+
+  <style>
+    :host {
+      display: block;
+      box-sizing: border-box;
+    }
+
+  </style>
+
+  <template>
+    <web-client 
+        apptitle="{{apptitle}}" 
+        fire-db="{{dataUrl}}"
+        roletest="{{roletest}}"
+        menu-items="{{menuItems}}">
+    </web-client>
+    <iron-pages selected="{{pageIndex}}">
+      <aws-home></aws-home>
+    </iron-pages>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+
+    is: 'aws-mgt5',
+
+    properties: {
+
+       menuItems: {
+        type: Array,
+        value: function () {
+          return [];
+        }
+      },
+      apptitle: {
+        type: String,
+        value: "NMB Arbitration 2"
+      },
+      dataUrl: {
+        type: String,
+        value: ""
+      },
+      roletest: {
+        type: String,
+        value: "management"
+      }
+
+    },
+
+    // Element Lifecycle
+
+    ready: function() {
+      this.menuItems = [
+              {name: "Home"}, 
+              {name: "Summary"}, 
+              {name: "Work Reports"},
+              {name: "Cases"},
+              {name: "Downloads"}
+              ];
+      console.log(this.menuItems);
+    }
+
+    // Element Behavior
+
+  });
+
+</script>
