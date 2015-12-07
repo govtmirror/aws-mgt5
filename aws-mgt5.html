@@ -3,9 +3,13 @@
 Copyright (c) 2015 dean wagner wagner@nmb.gov. All rights reserved.
 -->
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../web-client/web-client.html">
+<link rel="import" href="../app-client/app-client.html">
 <link rel="import" href="../aws-home/aws-home.html">
 <link rel="import" href="../nmb-private-pages/nmb-theme.html">
+<link rel="import" href="aws-mgt-summary.html">
+<link rel="import" href="aws-mgt-workreports.html">
+<link rel="import" href="aws-mgt-cases.html">
+<link rel="import" href="aws-mgt-downloads.html">
 
 
 <!--
@@ -28,15 +32,17 @@ Example:
   </style>
 
   <template>
-    <web-client 
-        apptitle="{{apptitle}}" 
+    <app-client 
+        app-title="{{appTitle}}" 
         fire-db="{{dataUrl}}"
         roletest="{{roletest}}"
         menu-items="{{menuItems}}">
-    </web-client>
-    <iron-pages selected="{{pageIndex}}">
       <aws-home></aws-home>
-    </iron-pages>
+      <aws-mgt-summary></aws-mgt-summary>
+      <aws-mgt-workreports></aws-mgt-workreports>
+      <aws-mgt-cases></aws-mgt-cases>
+      <aws-mgt-downloads></aws-mgt-downloads>
+    </app-client>
   </template>
 
 </dom-module>
@@ -55,7 +61,7 @@ Example:
           return [];
         }
       },
-      apptitle: {
+      appTitle: {
         type: String,
         value: "NMB Arbitration 2"
       },

@@ -21,7 +21,7 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
-    "web-client": "NMB-DEV/web-client#~0.4.2",
+    "app-client": "dwagner4/app-client#~0.1.0",
     "aws-home": "NMB-Dev/aws-home#~0.1.3",
     "nmb-private-pages": "NMB-Dev/nmb-private-pages#~0.0.5"
   },
