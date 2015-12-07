@@ -16,6 +16,7 @@ Copyright (c) 2015 dean wagner wagner@nmb.gov. All rights reserved.
 
 	<template>
 		<h2>downloads</h2>
+		<button on-tap="_uploadit">UPLOAD</button>
 	</template>
 
 </dom-module>
@@ -28,6 +29,15 @@ Copyright (c) 2015 dean wagner wagner@nmb.gov. All rights reserved.
 
 		properties: {
 
+			testdata: {
+				type: String,
+				value: "You, Me, tonight\ndinner, lobster, myplace"
+			}
+
+		},
+
+		_uploadit: function () {
+			alert("I will upload " + this.testdata);
 		}
 	});
 
