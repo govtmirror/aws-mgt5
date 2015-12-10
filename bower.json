@@ -23,7 +23,10 @@
     "polymer": "Polymer/polymer#^1.0.0",
     "app-client": "dwagner4/app-client#~0.1.0",
     "aws-home": "NMB-Dev/aws-home#~0.1.3",
-    "nmb-private-pages": "NMB-Dev/nmb-private-pages#~0.0.5"
+    "nmb-private-pages": "NMB-Dev/nmb-private-pages#~0.0.5",
+    "iron-form": "PolymerElements/iron-form#^1.0.0",
+    "paper-input": "PolymerElements/paper-input#^1.0.0",
+    "paper-button": "PolymerElements/paper-button#^1.0.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

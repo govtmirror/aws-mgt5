@@ -3,6 +3,9 @@
 Copyright (c) 2015 dean wagner wagner@nmb.gov. All rights reserved.
 -->
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-form/iron-form.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-button/paper-button.html">
 
 <dom-module id="aws-mgt-downloads">
 
@@ -16,6 +19,20 @@ Copyright (c) 2015 dean wagner wagner@nmb.gov. All rights reserved.
 
 	<template>
 		<h2>downloads</h2>
+		<!-- <form is="iron-form" id="formGet" method="post" action="/"> -->
+		  <paper-input 
+		  		label="Email" 
+		  		type="email" 
+		  		required 
+		  		auto-validate 
+		  		error-message="needs a valid email address">
+		  </paper-input>
+          <paper-input type="Date" auto-validate error-message="needs some text!"></paper-input>
+          <paper-button raised
+              on-tap="submitHandler">Submit</paper-button>
+          <paper-button raised
+              onclick="resetHandler(event)">Reset</paper-button>
+		<!-- </form> -->
 	</template>
 
 </dom-module>
@@ -28,7 +45,14 @@ Copyright (c) 2015 dean wagner wagner@nmb.gov. All rights reserved.
 
 		properties: {
 
-		}
+			workingflag: Boolean
+
+		},
+
+		// submitHandler: function() {
+		// 	console.log("in the submit handler");
+	 //       this.$.formGet.submit();
+	 //    }
 	});
 
 </script>

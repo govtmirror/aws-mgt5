@@ -36,12 +36,15 @@ Example:
         app-title="{{appTitle}}" 
         fire-db="{{dataUrl}}"
         roletest="{{roletest}}"
-        menu-items="{{menuItems}}">
+        menu-items="{{menuItems}}"
+        user="{{user}}">
       <aws-home></aws-home>
       <aws-mgt-summary></aws-mgt-summary>
       <aws-mgt-workreports></aws-mgt-workreports>
       <aws-mgt-cases></aws-mgt-cases>
-      <aws-mgt-downloads></aws-mgt-downloads>
+      <aws-mgt-downloads
+          user="[[user]]">
+      </aws-mgt-downloads>
     </app-client>
   </template>
 
